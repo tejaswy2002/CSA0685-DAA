@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+void stringCopy(char dest[], const char source[]) 
+{
+    int i = 0;
+    while (source[i] != '\0')
+	 {
+        dest[i] = source[i];
+        i++;
+    }
+    dest[i] = '\0'; 
+}
+
+int main()
+ {
+    char sourceString[] = "happy new year";
+    char destinationString[100];
+    stringCopy(destinationString, sourceString);
+    printf("Source string: %s\n", sourceString);
+    printf("Copied string: %s\n", destinationString);
+	return 0;
+}
